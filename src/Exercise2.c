@@ -20,17 +20,15 @@ int main(int argc, char *argv[]) {
 	int result = 1;
 	int i;
 	//Your codes here
-	if(n % 2 == 0)
+	if(n % 2)
 	{
-		for(i == 2;i <= n;i += 2)
+		for(i = 1;i <= n;i += 2)
 		    result *= i;
-		return result;
 	}
-	if(n % 2 != 0)
+	else
 	{
-		for(i == 3;i <= n;i += 2)
+		for(i = 2;i <= n;i += 2)
 		    result *= i;
-		return result;
 	}
 	printf("%d", result);
 	return 0;
