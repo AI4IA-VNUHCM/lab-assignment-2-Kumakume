@@ -13,9 +13,28 @@ ______________________________________
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	int testcase = atoi(argv[1]);
-	
 	//Your codes here
-	
-	
+	while (testcase%2 == 0)
+    {
+        printf("%d * ", 2);
+        testcase = testcase/2;
+    }
+ 
+    // n must be odd at this point.  So we can skip
+    // one element (Note i = i +2)
+    for (int i = 3; i <= sqrt(testcase); i = i+2)
+    {
+        // While i divides n, print i and divide n
+        while (testcase%i == 0)
+        {
+            printf("%d ", i);
+            testcase = testcase/i;
+        }
+    }
+ 
+    // This condition is to handle the case when n
+    // is a prime number greater than 2
+    if (testcase > 2)
+        printf ("%d ", testcase);
 	return 0;
 }
