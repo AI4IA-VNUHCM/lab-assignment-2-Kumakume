@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	int result = 1;
 	int i;
 	//Your codes here
-	if(n % 2)
+	if(n % 2 != 0)
 	{
 		for(i = 1;i <= n;i += 2)
 		    result *= i;
